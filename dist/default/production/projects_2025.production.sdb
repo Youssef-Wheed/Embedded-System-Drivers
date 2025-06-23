@@ -1,0 +1,280 @@
+[p GLOBOPT AUTOSTATIC IEEE_FLT IEEE_DBL LFSROK EMI_WORD ]
+[d version 1.1 ]
+[d edition pro ]
+[d chip 18F4620 ]
+[d frameptr 4065 ]
+"16 C:\Users\MC\Desktop\projects_2025\ECU_Layer/Button/ecu_button.c
+[e E2874 . `uc
+BUTTON_PRESSED 0
+BUTTON_RELEASED 1
+]
+[e E2878 . `uc
+BUTTON_ACTIVE_HIGH 0
+BUTTON_ACTIVE_LOW 1
+]
+"37
+[e E2814 . `uc
+GPIO_LOW 0
+GPIO_HIGH 1
+]
+"22 C:\Users\MC\Desktop\projects_2025\ECU_Layer/LED/ecu_led.c
+[e E2818 . `uc
+GPIO_DIRECTION_OUTPUT 0
+GPIO_DIRECTION_INPUT 1
+]
+"44
+[e E2814 . `uc
+GPIO_LOW 0
+GPIO_HIGH 1
+]
+"39 C:\Users\MC\Desktop\projects_2025\MCAL_Layer/GPIO/hal_gpio.c
+[e E2818 . `uc
+GPIO_DIRECTION_OUTPUT 0
+GPIO_DIRECTION_INPUT 1
+]
+"75
+[e E2814 . `uc
+GPIO_LOW 0
+GPIO_HIGH 1
+]
+"166
+[e E2832 . `uc
+PORTA_INDEX 0
+PORTB_INDEX 1
+PORTC_INDEX 2
+PORTD_INDEX 3
+PORTE_INDEX 4
+]
+"12 C:\Users\MC\Desktop\projects_2025\application.c
+[e E2832 . `uc
+PORTA_INDEX 0
+PORTB_INDEX 1
+PORTC_INDEX 2
+PORTD_INDEX 3
+PORTE_INDEX 4
+]
+[e E2822 . `uc
+GPIO_PIN0 0
+GPIO_PIN1 1
+GPIO_PIN2 2
+GPIO_PIN3 3
+GPIO_PIN4 4
+GPIO_PIN5 5
+GPIO_PIN6 6
+GPIO_PIN7 7
+]
+"15 C:\Users\MC\Desktop\projects_2025\ECU_Layer/Relay/ecu_relay.c
+[e E2818 . `uc
+GPIO_DIRECTION_OUTPUT 0
+GPIO_DIRECTION_INPUT 1
+]
+"29
+[e E2814 . `uc
+GPIO_LOW 0
+GPIO_HIGH 1
+]
+"18 C:\Users\MC\Desktop\projects_2025\application.c
+[v _main main `(i  1 e 2 0 ]
+"31
+[v _application_intialize application_intialize `(v  1 e 1 0 ]
+"4 C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\fleq.c
+[v ___fleq __fleq `(b  1 e 0 0 ]
+"62 C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\float.c
+[v ___ftpack __ftpack `(f  1 e 4 0 ]
+"86 C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\ftadd.c
+[v ___ftadd __ftadd `(f  1 e 4 0 ]
+"54 C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\ftdiv.c
+[v ___ftdiv __ftdiv `(f  1 e 4 0 ]
+"62 C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\ftmul.c
+[v ___ftmul __ftmul `(f  1 e 4 0 ]
+"19 C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\ftsub.c
+[v ___ftsub __ftsub `(f  1 e 4 0 ]
+"10 C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\sprcadd.c
+[v ___fladd __fladd `(d  1 e 4 0 ]
+"245
+[v ___flsub __flsub `(d  1 e 4 0 ]
+"11 C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\sprcdiv.c
+[v ___fldiv __fldiv `(d  1 e 4 0 ]
+"8 C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\sprcmul.c
+[v ___flmul __flmul `(d  1 e 4 0 ]
+"15 C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\Umul32.c
+[v ___lmul __lmul `(ul  1 e 4 0 ]
+"91 C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\Umul64.c
+[v ___omul __omul `(uo  1 e 8 0 ]
+"10 C:\Users\MC\Desktop\projects_2025\ECU_Layer/Relay/ecu_relay.c
+[v _relay_initialize relay_initialize `(uc  1 e 1 0 ]
+"22
+[v _relay_trun_on relay_trun_on `(uc  1 e 1 0 ]
+"34
+[v _relay_trun_off relay_trun_off `(uc  1 e 1 0 ]
+"25 C:\Users\MC\Desktop\projects_2025\MCAL_Layer/GPIO/hal_gpio.c
+[v _gpio_pin_direction_intialize gpio_pin_direction_intialize `(uc  1 e 1 0 ]
+"75
+[v _gpio_pin_write_logic gpio_pin_write_logic `(uc  1 e 1 0 ]
+"104
+[v _gpio_pin_read_logic gpio_pin_read_logic `(uc  1 e 1 0 ]
+"124
+[v _gpio_pin_toggle_logic gpio_pin_toggle_logic `(uc  1 e 1 0 ]
+"144
+[v _gpio_pin_intialize gpio_pin_intialize `(uc  1 e 1 0 ]
+[s S270 . 1 `uc 1 relay_port 1 0 :4:0 
+`uc 1 relay_pin 1 0 :3:4 
+`uc 1 relay_status 1 0 :1:7 
+]
+"12 C:\Users\MC\Desktop\projects_2025\application.c
+[v _relay_1 relay_1 `S270  1 e 1 0 ]
+"52 C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18Fxxxx_DFP/1.6.159/xc8\pic\include\proc\pic18f4620.h
+[v _PORTA PORTA `VEuc  1 e 1 @3968 ]
+"189
+[v _PORTB PORTB `VEuc  1 e 1 @3969 ]
+"360
+[v _PORTC PORTC `VEuc  1 e 1 @3970 ]
+"535
+[v _PORTD PORTD `VEuc  1 e 1 @3971 ]
+"677
+[v _PORTE PORTE `VEuc  1 e 1 @3972 ]
+"880
+[v _LATA LATA `VEuc  1 e 1 @3977 ]
+"992
+[v _LATB LATB `VEuc  1 e 1 @3978 ]
+"1104
+[v _LATC LATC `VEuc  1 e 1 @3979 ]
+"1216
+[v _LATD LATD `VEuc  1 e 1 @3980 ]
+"1328
+[v _LATE LATE `VEuc  1 e 1 @3981 ]
+"1380
+[v _TRISA TRISA `VEuc  1 e 1 @3986 ]
+"1602
+[v _TRISB TRISB `VEuc  1 e 1 @3987 ]
+"1824
+[v _TRISC TRISC `VEuc  1 e 1 @3988 ]
+"2046
+[v _TRISD TRISD `VEuc  1 e 1 @3989 ]
+"2268
+[v _TRISE TRISE `VEuc  1 e 1 @3990 ]
+"11 C:\Users\MC\Desktop\projects_2025\MCAL_Layer/GPIO/hal_gpio.c
+[v _tris_registers tris_registers `[5]*.39VEuc  1 e 10 0 ]
+"13
+[v _lat_registers lat_registers `[5]*.39VEuc  1 e 10 0 ]
+"15
+[v _port_registers port_registers `[5]*.39VEuc  1 e 10 0 ]
+"18 C:\Users\MC\Desktop\projects_2025\application.c
+[v _main main `(i  1 e 2 0 ]
+{
+"29
+} 0
+"22 C:\Users\MC\Desktop\projects_2025\ECU_Layer/Relay/ecu_relay.c
+[v _relay_trun_on relay_trun_on `(uc  1 e 1 0 ]
+{
+[s S24 . 1 `uc 1 port 1 0 :3:0 
+`uc 1 pin 1 0 :3:3 
+`uc 1 direction 1 0 :1:6 
+`uc 1 logic 1 0 :1:7 
+]
+"27
+[v relay_trun_on@pin_obj pin_obj `S24  1 a 1 11 ]
+"23
+[v relay_trun_on@ret ret `uc  1 a 1 10 ]
+[s S270 . 1 `uc 1 relay_port 1 0 :4:0 
+`uc 1 relay_pin 1 0 :3:4 
+`uc 1 relay_status 1 0 :1:7 
+]
+"22
+[v relay_trun_on@_relay _relay `*.30CS270  1 p 1 8 ]
+"26
+[v relay_trun_on@F2893 F2893 `S24  1 s 1 F2893 ]
+"32
+} 0
+"34
+[v _relay_trun_off relay_trun_off `(uc  1 e 1 0 ]
+{
+[s S24 . 1 `uc 1 port 1 0 :3:0 
+`uc 1 pin 1 0 :3:3 
+`uc 1 direction 1 0 :1:6 
+`uc 1 logic 1 0 :1:7 
+]
+"39
+[v relay_trun_off@pin_obj pin_obj `S24  1 a 1 11 ]
+"35
+[v relay_trun_off@ret ret `uc  1 a 1 10 ]
+[s S270 . 1 `uc 1 relay_port 1 0 :4:0 
+`uc 1 relay_pin 1 0 :3:4 
+`uc 1 relay_status 1 0 :1:7 
+]
+"34
+[v relay_trun_off@_relay _relay `*.30CS270  1 p 1 8 ]
+"38
+[v relay_trun_off@F2898 F2898 `S24  1 s 1 F2898 ]
+"44
+} 0
+"31 C:\Users\MC\Desktop\projects_2025\application.c
+[v _application_intialize application_intialize `(v  1 e 1 0 ]
+{
+"34
+} 0
+"10 C:\Users\MC\Desktop\projects_2025\ECU_Layer/Relay/ecu_relay.c
+[v _relay_initialize relay_initialize `(uc  1 e 1 0 ]
+{
+[s S24 . 1 `uc 1 port 1 0 :3:0 
+`uc 1 pin 1 0 :3:3 
+`uc 1 direction 1 0 :1:6 
+`uc 1 logic 1 0 :1:7 
+]
+"15
+[v relay_initialize@pin_obj pin_obj `S24  1 a 1 14 ]
+"11
+[v relay_initialize@ret ret `uc  1 a 1 13 ]
+[s S270 . 1 `uc 1 relay_port 1 0 :4:0 
+`uc 1 relay_pin 1 0 :3:4 
+`uc 1 relay_status 1 0 :1:7 
+]
+"10
+[v relay_initialize@_relay _relay `*.30CS270  1 p 1 11 ]
+"14
+[v relay_initialize@F2888 F2888 `S24  1 s 1 F2888 ]
+"20
+} 0
+"144 C:\Users\MC\Desktop\projects_2025\MCAL_Layer/GPIO/hal_gpio.c
+[v _gpio_pin_intialize gpio_pin_intialize `(uc  1 e 1 0 ]
+{
+"145
+[v gpio_pin_intialize@ret ret `uc  1 a 1 10 ]
+[s S24 . 1 `uc 1 port 1 0 :3:0 
+`uc 1 pin 1 0 :3:3 
+`uc 1 direction 1 0 :1:6 
+`uc 1 logic 1 0 :1:7 
+]
+"144
+[v gpio_pin_intialize@_pin_config _pin_config `*.30CS24  1 p 1 8 ]
+"154
+} 0
+"75
+[v _gpio_pin_write_logic gpio_pin_write_logic `(uc  1 e 1 0 ]
+{
+"76
+[v gpio_pin_write_logic@ret ret `uc  1 a 1 7 ]
+[s S24 . 1 `uc 1 port 1 0 :3:0 
+`uc 1 pin 1 0 :3:3 
+`uc 1 direction 1 0 :1:6 
+`uc 1 logic 1 0 :1:7 
+]
+"75
+[v gpio_pin_write_logic@_pin_config _pin_config `*.30CS24  1 p 1 0 ]
+[v gpio_pin_write_logic@logic logic `E2814  1 p 1 1 ]
+"92
+} 0
+"25
+[v _gpio_pin_direction_intialize gpio_pin_direction_intialize `(uc  1 e 1 0 ]
+{
+"26
+[v gpio_pin_direction_intialize@ret ret `uc  1 a 1 6 ]
+[s S24 . 1 `uc 1 port 1 0 :3:0 
+`uc 1 pin 1 0 :3:3 
+`uc 1 direction 1 0 :1:6 
+`uc 1 logic 1 0 :1:7 
+]
+"25
+[v gpio_pin_direction_intialize@_pin_config _pin_config `*.30CS24  1 p 1 0 ]
+"42
+} 0
