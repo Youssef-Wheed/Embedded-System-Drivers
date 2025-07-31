@@ -14,7 +14,7 @@
 
 /* Section: Macro Declarations */
 #define RELAY_ON_STATUS  0x01U
-#define RELAY_OFF_STATUS  0x01U
+#define RELAY_OFF_STATUS  0x00U
 
 /* Section: Macro Functions Declarations */
 

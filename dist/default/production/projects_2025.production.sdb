@@ -27,6 +27,16 @@ GPIO_DIRECTION_INPUT 1
 GPIO_LOW 0
 GPIO_HIGH 1
 ]
+"15 C:\Users\MC\Desktop\projects_2025\ECU_Layer/Relay/ecu_relay.c
+[e E2818 . `uc
+GPIO_DIRECTION_OUTPUT 0
+GPIO_DIRECTION_INPUT 1
+]
+"29
+[e E2814 . `uc
+GPIO_LOW 0
+GPIO_HIGH 1
+]
 "39 C:\Users\MC\Desktop\projects_2025\MCAL_Layer/GPIO/hal_gpio.c
 [e E2818 . `uc
 GPIO_DIRECTION_OUTPUT 0
@@ -63,19 +73,18 @@ GPIO_PIN5 5
 GPIO_PIN6 6
 GPIO_PIN7 7
 ]
-"15 C:\Users\MC\Desktop\projects_2025\ECU_Layer/Relay/ecu_relay.c
 [e E2818 . `uc
 GPIO_DIRECTION_OUTPUT 0
 GPIO_DIRECTION_INPUT 1
 ]
-"29
+"35 C:\Users\MC\Desktop\projects_2025\ECU_Layer/DC_Motor/ecu_dc_motor.c
 [e E2814 . `uc
 GPIO_LOW 0
 GPIO_HIGH 1
 ]
-"18 C:\Users\MC\Desktop\projects_2025\application.c
+"42 C:\Users\MC\Desktop\projects_2025\application.c
 [v _main main `(i  1 e 2 0 ]
-"31
+"69
 [v _application_intialize application_intialize `(v  1 e 1 0 ]
 "4 C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\fleq.c
 [v ___fleq __fleq `(b  1 e 0 0 ]
@@ -101,12 +110,14 @@ GPIO_HIGH 1
 [v ___lmul __lmul `(ul  1 e 4 0 ]
 "91 C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\Umul64.c
 [v ___omul __omul `(uo  1 e 8 0 ]
-"10 C:\Users\MC\Desktop\projects_2025\ECU_Layer/Relay/ecu_relay.c
-[v _relay_initialize relay_initialize `(uc  1 e 1 0 ]
-"22
-[v _relay_trun_on relay_trun_on `(uc  1 e 1 0 ]
-"34
-[v _relay_trun_off relay_trun_off `(uc  1 e 1 0 ]
+"14 C:\Users\MC\Desktop\projects_2025\ECU_Layer/DC_Motor/ecu_dc_motor.c
+[v _dc_motor_initialize dc_motor_initialize `(uc  1 e 1 0 ]
+"30
+[v _dc_motor_move_right dc_motor_move_right `(uc  1 e 1 0 ]
+"46
+[v _dc_motor_move_left dc_motor_move_left `(uc  1 e 1 0 ]
+"62
+[v _dc_motor_move_stop dc_motor_move_stop `(uc  1 e 1 0 ]
 "25 C:\Users\MC\Desktop\projects_2025\MCAL_Layer/GPIO/hal_gpio.c
 [v _gpio_pin_direction_intialize gpio_pin_direction_intialize `(uc  1 e 1 0 ]
 "75
@@ -117,12 +128,16 @@ GPIO_HIGH 1
 [v _gpio_pin_toggle_logic gpio_pin_toggle_logic `(uc  1 e 1 0 ]
 "144
 [v _gpio_pin_intialize gpio_pin_intialize `(uc  1 e 1 0 ]
-[s S270 . 1 `uc 1 relay_port 1 0 :4:0 
-`uc 1 relay_pin 1 0 :3:4 
-`uc 1 relay_status 1 0 :1:7 
+[s S24 . 1 `uc 1 port 1 0 :3:0 
+`uc 1 pin 1 0 :3:3 
+`uc 1 direction 1 0 :1:6 
+`uc 1 logic 1 0 :1:7 
 ]
 "12 C:\Users\MC\Desktop\projects_2025\application.c
-[v _relay_1 relay_1 `S270  1 e 1 0 ]
+[s S340 . 2 `[2]S24 1 dc_motor_pin 2 0 ]
+[v _dc_motor_1 dc_motor_1 `S340  1 e 2 0 ]
+"27
+[v _dc_motor_2 dc_motor_2 `S340  1 e 2 0 ]
 "52 C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18Fxxxx_DFP/1.6.159/xc8\pic\include\proc\pic18f4620.h
 [v _PORTA PORTA `VEuc  1 e 1 @3968 ]
 "189
@@ -159,81 +174,75 @@ GPIO_HIGH 1
 [v _lat_registers lat_registers `[5]*.39VEuc  1 e 10 0 ]
 "15
 [v _port_registers port_registers `[5]*.39VEuc  1 e 10 0 ]
-"18 C:\Users\MC\Desktop\projects_2025\application.c
+"42 C:\Users\MC\Desktop\projects_2025\application.c
 [v _main main `(i  1 e 2 0 ]
 {
-"29
+"67
 } 0
-"22 C:\Users\MC\Desktop\projects_2025\ECU_Layer/Relay/ecu_relay.c
-[v _relay_trun_on relay_trun_on `(uc  1 e 1 0 ]
+"62 C:\Users\MC\Desktop\projects_2025\ECU_Layer/DC_Motor/ecu_dc_motor.c
+[v _dc_motor_move_stop dc_motor_move_stop `(uc  1 e 1 0 ]
 {
+"63
+[v dc_motor_move_stop@ret ret `uc  1 a 1 9 ]
 [s S24 . 1 `uc 1 port 1 0 :3:0 
 `uc 1 pin 1 0 :3:3 
 `uc 1 direction 1 0 :1:6 
 `uc 1 logic 1 0 :1:7 
 ]
-"27
-[v relay_trun_on@pin_obj pin_obj `S24  1 a 1 11 ]
-"23
-[v relay_trun_on@ret ret `uc  1 a 1 10 ]
-[s S270 . 1 `uc 1 relay_port 1 0 :4:0 
-`uc 1 relay_pin 1 0 :3:4 
-`uc 1 relay_status 1 0 :1:7 
-]
-"22
-[v relay_trun_on@_relay _relay `*.30CS270  1 p 1 8 ]
-"26
-[v relay_trun_on@F2893 F2893 `S24  1 s 1 F2893 ]
-"32
+"62
+[s S340 . 2 `[2]S24 1 dc_motor_pin 2 0 ]
+[v dc_motor_move_stop@_dc_motor _dc_motor `*.30CS340  1 p 1 8 ]
+"71
 } 0
-"34
-[v _relay_trun_off relay_trun_off `(uc  1 e 1 0 ]
+"30
+[v _dc_motor_move_right dc_motor_move_right `(uc  1 e 1 0 ]
 {
+"31
+[v dc_motor_move_right@ret ret `uc  1 a 1 9 ]
 [s S24 . 1 `uc 1 port 1 0 :3:0 
 `uc 1 pin 1 0 :3:3 
 `uc 1 direction 1 0 :1:6 
 `uc 1 logic 1 0 :1:7 
 ]
+"30
+[s S340 . 2 `[2]S24 1 dc_motor_pin 2 0 ]
+[v dc_motor_move_right@_dc_motor _dc_motor `*.30CS340  1 p 1 8 ]
 "39
-[v relay_trun_off@pin_obj pin_obj `S24  1 a 1 11 ]
-"35
-[v relay_trun_off@ret ret `uc  1 a 1 10 ]
-[s S270 . 1 `uc 1 relay_port 1 0 :4:0 
-`uc 1 relay_pin 1 0 :3:4 
-`uc 1 relay_status 1 0 :1:7 
-]
-"34
-[v relay_trun_off@_relay _relay `*.30CS270  1 p 1 8 ]
-"38
-[v relay_trun_off@F2898 F2898 `S24  1 s 1 F2898 ]
-"44
 } 0
-"31 C:\Users\MC\Desktop\projects_2025\application.c
+"46
+[v _dc_motor_move_left dc_motor_move_left `(uc  1 e 1 0 ]
+{
+"47
+[v dc_motor_move_left@ret ret `uc  1 a 1 9 ]
+[s S24 . 1 `uc 1 port 1 0 :3:0 
+`uc 1 pin 1 0 :3:3 
+`uc 1 direction 1 0 :1:6 
+`uc 1 logic 1 0 :1:7 
+]
+"46
+[s S340 . 2 `[2]S24 1 dc_motor_pin 2 0 ]
+[v dc_motor_move_left@_dc_motor _dc_motor `*.30CS340  1 p 1 8 ]
+"55
+} 0
+"69 C:\Users\MC\Desktop\projects_2025\application.c
 [v _application_intialize application_intialize `(v  1 e 1 0 ]
 {
-"34
+"74
 } 0
-"10 C:\Users\MC\Desktop\projects_2025\ECU_Layer/Relay/ecu_relay.c
-[v _relay_initialize relay_initialize `(uc  1 e 1 0 ]
+"14 C:\Users\MC\Desktop\projects_2025\ECU_Layer/DC_Motor/ecu_dc_motor.c
+[v _dc_motor_initialize dc_motor_initialize `(uc  1 e 1 0 ]
 {
+"15
+[v dc_motor_initialize@ret ret `uc  1 a 1 12 ]
 [s S24 . 1 `uc 1 port 1 0 :3:0 
 `uc 1 pin 1 0 :3:3 
 `uc 1 direction 1 0 :1:6 
 `uc 1 logic 1 0 :1:7 
 ]
-"15
-[v relay_initialize@pin_obj pin_obj `S24  1 a 1 14 ]
-"11
-[v relay_initialize@ret ret `uc  1 a 1 13 ]
-[s S270 . 1 `uc 1 relay_port 1 0 :4:0 
-`uc 1 relay_pin 1 0 :3:4 
-`uc 1 relay_status 1 0 :1:7 
-]
-"10
-[v relay_initialize@_relay _relay `*.30CS270  1 p 1 11 ]
 "14
-[v relay_initialize@F2888 F2888 `S24  1 s 1 F2888 ]
-"20
+[s S340 . 2 `[2]S24 1 dc_motor_pin 2 0 ]
+[v dc_motor_initialize@_dc_motor _dc_motor `*.30CS340  1 p 1 11 ]
+"23
 } 0
 "144 C:\Users\MC\Desktop\projects_2025\MCAL_Layer/GPIO/hal_gpio.c
 [v _gpio_pin_intialize gpio_pin_intialize `(uc  1 e 1 0 ]
