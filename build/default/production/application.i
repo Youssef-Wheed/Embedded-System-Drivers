@@ -4826,66 +4826,24 @@ void application_intialize(void);
 
 
 
-dc_motor_t dc_motor_1 = {
-
-    .dc_motor_pin[0].port = PORTC_INDEX,
-    .dc_motor_pin[0].pin = GPIO_PIN0,
-    .dc_motor_pin[0].logic = 0x00U,
-    .dc_motor_pin[0].direction = GPIO_DIRECTION_OUTPUT,
-
-
-    .dc_motor_pin[1].port = PORTC_INDEX,
-    .dc_motor_pin[1].pin = GPIO_PIN1,
-    .dc_motor_pin[1].logic = 0x00U,
-    .dc_motor_pin[1].direction = GPIO_DIRECTION_OUTPUT
-
-};
-
-dc_motor_t dc_motor_2 = {
-
-    .dc_motor_pin[0].port = PORTC_INDEX,
-    .dc_motor_pin[0].pin = GPIO_PIN2,
-    .dc_motor_pin[0].logic = 0x00U,
-    .dc_motor_pin[0].direction = GPIO_DIRECTION_OUTPUT,
-
-
-    .dc_motor_pin[1].port = PORTC_INDEX,
-    .dc_motor_pin[1].pin = GPIO_PIN3,
-    .dc_motor_pin[1].logic = 0x00U,
-    .dc_motor_pin[1].direction = GPIO_DIRECTION_OUTPUT
-
-};
+uint8 number = 0, number_BCD = 0;
 
 int main() {
     Std_ReturnType ret = (Std_ReturnType)0x00;
     application_intialize();
 
     while (1) {
-        ret = dc_motor_move_right(&dc_motor_1);
-        ret = dc_motor_move_right(&dc_motor_2);
-        _delay((unsigned long)((3000)*(8000000UL/4000.0)));
-        ret = dc_motor_move_left(&dc_motor_1);
-        ret = dc_motor_move_left(&dc_motor_2);
-        _delay((unsigned long)((3000)*(8000000UL/4000.0)));
-        ret = dc_motor_move_stop(&dc_motor_1);
-        ret = dc_motor_move_stop(&dc_motor_2);
-        _delay((unsigned long)((3000)*(8000000UL/4000.0)));
-        ret = dc_motor_move_right(&dc_motor_1);
-        ret = dc_motor_move_left(&dc_motor_2);
-        _delay((unsigned long)((3000)*(8000000UL/4000.0)));
-        ret = dc_motor_move_stop(&dc_motor_1);
-        ret = dc_motor_move_stop(&dc_motor_2);
-        _delay((unsigned long)((3000)*(8000000UL/4000.0)));
-        ret = dc_motor_move_right(&dc_motor_2);
-        ret = dc_motor_move_left(&dc_motor_1);
-        _delay((unsigned long)((3000)*(8000000UL/4000.0)));
+        number_BCD = (((uint8) number % 10) | (((uint8) number / 10) << 4));
+        ret = gpio_port_write_logic(PORTC_INDEX, number_BCD);
+        number++;
+        _delay((unsigned long)((250)*(8000000UL/4000.0)));
     }
     return (0);
 }
 
 void application_intialize(void) {
     Std_ReturnType ret = (Std_ReturnType)0x00;
-    ret = dc_motor_initialize(&dc_motor_1);
-    ret = dc_motor_initialize(&dc_motor_2);
+    ret = gpio_port_direction_intialize(PORTC_INDEX, 0x00);
+    ret = gpio_port_write_logic(PORTC_INDEX, 0);
 
 }

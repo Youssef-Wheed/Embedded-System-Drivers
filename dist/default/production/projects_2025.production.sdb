@@ -55,7 +55,7 @@ PORTC_INDEX 2
 PORTD_INDEX 3
 PORTE_INDEX 4
 ]
-"12 C:\Users\MC\Desktop\projects_2025\application.c
+"20 C:\Users\MC\Desktop\projects_2025\application.c
 [e E2832 . `uc
 PORTA_INDEX 0
 PORTB_INDEX 1
@@ -63,29 +63,19 @@ PORTC_INDEX 2
 PORTD_INDEX 3
 PORTE_INDEX 4
 ]
-[e E2822 . `uc
-GPIO_PIN0 0
-GPIO_PIN1 1
-GPIO_PIN2 2
-GPIO_PIN3 3
-GPIO_PIN4 4
-GPIO_PIN5 5
-GPIO_PIN6 6
-GPIO_PIN7 7
-]
-[e E2818 . `uc
-GPIO_DIRECTION_OUTPUT 0
-GPIO_DIRECTION_INPUT 1
-]
 "35 C:\Users\MC\Desktop\projects_2025\ECU_Layer/DC_Motor/ecu_dc_motor.c
 [e E2814 . `uc
 GPIO_LOW 0
 GPIO_HIGH 1
 ]
-"42 C:\Users\MC\Desktop\projects_2025\application.c
+"14 C:\Users\MC\Desktop\projects_2025\application.c
 [v _main main `(i  1 e 2 0 ]
-"69
+"27
 [v _application_intialize application_intialize `(v  1 e 1 0 ]
+"7 C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\awdiv.c
+[v ___awdiv __awdiv `(i  1 e 2 0 ]
+"7 C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\awmod.c
+[v ___awmod __awmod `(i  1 e 2 0 ]
 "4 C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\fleq.c
 [v ___fleq __fleq `(b  1 e 0 0 ]
 "62 C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\float.c
@@ -110,14 +100,6 @@ GPIO_HIGH 1
 [v ___lmul __lmul `(ul  1 e 4 0 ]
 "91 C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\Umul64.c
 [v ___omul __omul `(uo  1 e 8 0 ]
-"14 C:\Users\MC\Desktop\projects_2025\ECU_Layer/DC_Motor/ecu_dc_motor.c
-[v _dc_motor_initialize dc_motor_initialize `(uc  1 e 1 0 ]
-"30
-[v _dc_motor_move_right dc_motor_move_right `(uc  1 e 1 0 ]
-"46
-[v _dc_motor_move_left dc_motor_move_left `(uc  1 e 1 0 ]
-"62
-[v _dc_motor_move_stop dc_motor_move_stop `(uc  1 e 1 0 ]
 "25 C:\Users\MC\Desktop\projects_2025\MCAL_Layer/GPIO/hal_gpio.c
 [v _gpio_pin_direction_intialize gpio_pin_direction_intialize `(uc  1 e 1 0 ]
 "75
@@ -128,16 +110,13 @@ GPIO_HIGH 1
 [v _gpio_pin_toggle_logic gpio_pin_toggle_logic `(uc  1 e 1 0 ]
 "144
 [v _gpio_pin_intialize gpio_pin_intialize `(uc  1 e 1 0 ]
-[s S24 . 1 `uc 1 port 1 0 :3:0 
-`uc 1 pin 1 0 :3:3 
-`uc 1 direction 1 0 :1:6 
-`uc 1 logic 1 0 :1:7 
-]
+"166
+[v _gpio_port_direction_intialize gpio_port_direction_intialize `(uc  1 e 1 0 ]
+"208
+[v _gpio_port_write_logic gpio_port_write_logic `(uc  1 e 1 0 ]
 "12 C:\Users\MC\Desktop\projects_2025\application.c
-[s S340 . 2 `[2]S24 1 dc_motor_pin 2 0 ]
-[v _dc_motor_1 dc_motor_1 `S340  1 e 2 0 ]
-"27
-[v _dc_motor_2 dc_motor_2 `S340  1 e 2 0 ]
+[v _number number `uc  1 e 1 0 ]
+[v _number_BCD number_BCD `uc  1 e 1 0 ]
 "52 C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18Fxxxx_DFP/1.6.159/xc8\pic\include\proc\pic18f4620.h
 [v _PORTA PORTA `VEuc  1 e 1 @3968 ]
 "189
@@ -174,116 +153,61 @@ GPIO_HIGH 1
 [v _lat_registers lat_registers `[5]*.39VEuc  1 e 10 0 ]
 "15
 [v _port_registers port_registers `[5]*.39VEuc  1 e 10 0 ]
-"42 C:\Users\MC\Desktop\projects_2025\application.c
+"14 C:\Users\MC\Desktop\projects_2025\application.c
 [v _main main `(i  1 e 2 0 ]
 {
-"67
+"25
 } 0
-"62 C:\Users\MC\Desktop\projects_2025\ECU_Layer/DC_Motor/ecu_dc_motor.c
-[v _dc_motor_move_stop dc_motor_move_stop `(uc  1 e 1 0 ]
-{
-"63
-[v dc_motor_move_stop@ret ret `uc  1 a 1 9 ]
-[s S24 . 1 `uc 1 port 1 0 :3:0 
-`uc 1 pin 1 0 :3:3 
-`uc 1 direction 1 0 :1:6 
-`uc 1 logic 1 0 :1:7 
-]
-"62
-[s S340 . 2 `[2]S24 1 dc_motor_pin 2 0 ]
-[v dc_motor_move_stop@_dc_motor _dc_motor `*.30CS340  1 p 1 8 ]
-"71
-} 0
-"30
-[v _dc_motor_move_right dc_motor_move_right `(uc  1 e 1 0 ]
-{
-"31
-[v dc_motor_move_right@ret ret `uc  1 a 1 9 ]
-[s S24 . 1 `uc 1 port 1 0 :3:0 
-`uc 1 pin 1 0 :3:3 
-`uc 1 direction 1 0 :1:6 
-`uc 1 logic 1 0 :1:7 
-]
-"30
-[s S340 . 2 `[2]S24 1 dc_motor_pin 2 0 ]
-[v dc_motor_move_right@_dc_motor _dc_motor `*.30CS340  1 p 1 8 ]
-"39
-} 0
-"46
-[v _dc_motor_move_left dc_motor_move_left `(uc  1 e 1 0 ]
-{
-"47
-[v dc_motor_move_left@ret ret `uc  1 a 1 9 ]
-[s S24 . 1 `uc 1 port 1 0 :3:0 
-`uc 1 pin 1 0 :3:3 
-`uc 1 direction 1 0 :1:6 
-`uc 1 logic 1 0 :1:7 
-]
-"46
-[s S340 . 2 `[2]S24 1 dc_motor_pin 2 0 ]
-[v dc_motor_move_left@_dc_motor _dc_motor `*.30CS340  1 p 1 8 ]
-"55
-} 0
-"69 C:\Users\MC\Desktop\projects_2025\application.c
+"27
 [v _application_intialize application_intialize `(v  1 e 1 0 ]
 {
-"74
+"32
 } 0
-"14 C:\Users\MC\Desktop\projects_2025\ECU_Layer/DC_Motor/ecu_dc_motor.c
-[v _dc_motor_initialize dc_motor_initialize `(uc  1 e 1 0 ]
+"208 C:\Users\MC\Desktop\projects_2025\MCAL_Layer/GPIO/hal_gpio.c
+[v _gpio_port_write_logic gpio_port_write_logic `(uc  1 e 1 0 ]
 {
-"15
-[v dc_motor_initialize@ret ret `uc  1 a 1 12 ]
-[s S24 . 1 `uc 1 port 1 0 :3:0 
-`uc 1 pin 1 0 :3:3 
-`uc 1 direction 1 0 :1:6 
-`uc 1 logic 1 0 :1:7 
-]
-"14
-[s S340 . 2 `[2]S24 1 dc_motor_pin 2 0 ]
-[v dc_motor_initialize@_dc_motor _dc_motor `*.30CS340  1 p 1 11 ]
-"23
+[v gpio_port_write_logic@port port `E2832  1 a 1 wreg ]
+"209
+[v gpio_port_write_logic@ret ret `uc  1 a 1 3 ]
+"208
+[v gpio_port_write_logic@port port `E2832  1 a 1 wreg ]
+[v gpio_port_write_logic@logic logic `uc  1 p 1 0 ]
+[v gpio_port_write_logic@port port `E2832  1 a 1 4 ]
+"217
 } 0
-"144 C:\Users\MC\Desktop\projects_2025\MCAL_Layer/GPIO/hal_gpio.c
-[v _gpio_pin_intialize gpio_pin_intialize `(uc  1 e 1 0 ]
+"166
+[v _gpio_port_direction_intialize gpio_port_direction_intialize `(uc  1 e 1 0 ]
 {
-"145
-[v gpio_pin_intialize@ret ret `uc  1 a 1 10 ]
-[s S24 . 1 `uc 1 port 1 0 :3:0 
-`uc 1 pin 1 0 :3:3 
-`uc 1 direction 1 0 :1:6 
-`uc 1 logic 1 0 :1:7 
-]
-"144
-[v gpio_pin_intialize@_pin_config _pin_config `*.30CS24  1 p 1 8 ]
-"154
+[v gpio_port_direction_intialize@port port `E2832  1 a 1 wreg ]
+"167
+[v gpio_port_direction_intialize@ret ret `uc  1 a 1 3 ]
+"166
+[v gpio_port_direction_intialize@port port `E2832  1 a 1 wreg ]
+[v gpio_port_direction_intialize@direction direction `uc  1 p 1 0 ]
+[v gpio_port_direction_intialize@port port `E2832  1 a 1 4 ]
+"175
 } 0
-"75
-[v _gpio_pin_write_logic gpio_pin_write_logic `(uc  1 e 1 0 ]
+"7 C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\awmod.c
+[v ___awmod __awmod `(i  1 e 2 0 ]
 {
-"76
-[v gpio_pin_write_logic@ret ret `uc  1 a 1 7 ]
-[s S24 . 1 `uc 1 port 1 0 :3:0 
-`uc 1 pin 1 0 :3:3 
-`uc 1 direction 1 0 :1:6 
-`uc 1 logic 1 0 :1:7 
-]
-"75
-[v gpio_pin_write_logic@_pin_config _pin_config `*.30CS24  1 p 1 0 ]
-[v gpio_pin_write_logic@logic logic `E2814  1 p 1 1 ]
-"92
+"10
+[v ___awmod@sign sign `uc  1 a 1 5 ]
+[v ___awmod@counter counter `uc  1 a 1 4 ]
+"7
+[v ___awmod@dividend dividend `i  1 p 2 0 ]
+[v ___awmod@divisor divisor `i  1 p 2 2 ]
+"34
 } 0
-"25
-[v _gpio_pin_direction_intialize gpio_pin_direction_intialize `(uc  1 e 1 0 ]
+"7 C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\awdiv.c
+[v ___awdiv __awdiv `(i  1 e 2 0 ]
 {
-"26
-[v gpio_pin_direction_intialize@ret ret `uc  1 a 1 6 ]
-[s S24 . 1 `uc 1 port 1 0 :3:0 
-`uc 1 pin 1 0 :3:3 
-`uc 1 direction 1 0 :1:6 
-`uc 1 logic 1 0 :1:7 
-]
-"25
-[v gpio_pin_direction_intialize@_pin_config _pin_config `*.30CS24  1 p 1 0 ]
-"42
+"10
+[v ___awdiv@quotient quotient `i  1 a 2 6 ]
+"11
+[v ___awdiv@sign sign `uc  1 a 1 5 ]
+[v ___awdiv@counter counter `uc  1 a 1 4 ]
+"7
+[v ___awdiv@dividend dividend `i  1 p 2 0 ]
+[v ___awdiv@divisor divisor `i  1 p 2 2 ]
+"41
 } 0
