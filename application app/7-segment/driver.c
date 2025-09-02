@@ -9,20 +9,6 @@
 #include <xc.h>
 //#define _XTAL_FREQ 4000000
 
-pin_config_t seg1_enable = {
-    .port = PORTD_INDEX,
-    .pin = GPIO_PIN0,
-    .logic = GPIO_LOW,
-    .direction = GPIO_DIRECTION_OUTPUT,
-};
-
-pin_config_t seg2_enable = {
-    .port = PORTD_INDEX,
-    .pin = GPIO_PIN1,
-    .logic = GPIO_LOW,
-    .direction = GPIO_DIRECTION_OUTPUT,
-};
-
 segment_t seg1 = {
     // pin 1 
     .segment_pin[0].port = PORTC_INDEX,
@@ -53,28 +39,18 @@ segment_t seg1 = {
 
 };
 
-uint8 number = 48 , counter = 0;
+uint8 number = 0;
 
 int main() {
     Std_ReturnType ret = E_NOT_OK;
     application_intialize();
 
     while (1) {
-
-
-        for (counter = 0; counter <= 50; counter++) {
-            ret = seven_segment_write_number(&seg1, (uint8) (number % 10));
-            ret = gpio_pin_write_logic(&seg1_enable, GPIO_HIGH);
-            __delay_ms(10);
-            ret = gpio_pin_write_logic(&seg1_enable, GPIO_LOW);
-
-            ret = seven_segment_write_number(&seg1, (uint8) (number / 10));
-            ret = gpio_pin_write_logic(&seg2_enable, GPIO_HIGH);
-            __delay_ms(10);
-            ret = gpio_pin_write_logic(&seg2_enable, GPIO_LOW);
+        for (number = 0; number <= 9; number++) {
+            ret = seven_segment_write_number(&seg1, number);
+            __delay_ms(500);
         }
-        
-        number++;
+
     }
     return (EXIT_SUCCESS);
 }
@@ -82,7 +58,6 @@ int main() {
 void application_intialize(void) {
     Std_ReturnType ret = E_NOT_OK;
     ret = seven_segment_intialize(&seg1);
-    ret = gpio_pin_intialize(&seg1_enable);
-    ret = gpio_pin_intialize(&seg2_enable);
+
 
 }

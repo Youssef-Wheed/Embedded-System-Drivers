@@ -7,17 +7,13 @@
 
 #ifndef ECU_BUTTON_CFG_H
 #define	ECU_BUTTON_CFG_H
+/* Section: Macro Declarations */
 
-#ifdef	__cplusplus
-extern "C" {
-#endif
+/* Section: Macro Functions Declarations */
 
+/* Section: Data Type Declarations */
 
-
-
-#ifdef	__cplusplus
-}
-#endif
+/* Section: Function Declarations */
 
 #endif	/* ECU_BUTTON_CFG_H */
 
