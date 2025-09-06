@@ -9,19 +9,13 @@
 #define	APPLICATION_H
 
 /* Section : Includes */
-#include "ECU_Layer/LED/ecu_led.h"
-#include "ECU_Layer/Button/ecu_button.h"
-#include "ECU_Layer/Relay/ecu_relay.h"
-#include "ECU_Layer/DC_Motor/ecu_dc_motor.h"
-#include "ECU_Layer/7_Segment/ecu_seven_seg.h"
-#include "ECU_Layer/KeyPad/ecu_keypad.h"
-
+#include "ECU_Layer/ecu_layer_init.h"
 /* Section: Macro Declarations */
 
 /* Section: Macro Functions Declarations */
 
 /* Section: Data Type Declarations */
-
+extern keypad_t keypad1;
 /* Section: Function Declarations */
 void application_intialize(void);
 

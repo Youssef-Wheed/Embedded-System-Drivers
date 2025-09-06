@@ -9,26 +9,19 @@
 #include <xc.h>
 //#define _XTAL_FREQ 4000000
 
-keypad_t keypad1 = {
-  .keypad_row_pins [0].port = PORTC_INDEX,
-  .keypad_row_pins [0].pin = GPIO_PIN0,
-  .keypad_row_pins [0].direction = GPIO_DIRECTION_OUTPUT,
-  
-  
-};
-
+uint8 keypad_value = ZERO_INIT;
 
 int main() {
     Std_ReturnType ret = E_NOT_OK;
     application_intialize();
 
     while (1) {
-
+        ret = keypad_get_value(&keypad1,&keypad_value);
     }
     return (EXIT_SUCCESS);
 }
 
 void application_intialize(void) {
     Std_ReturnType ret = E_NOT_OK;
-
+    ecu_layer_intialize();
 }

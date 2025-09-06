@@ -16,6 +16,8 @@
 
 # 1 "./application.h" 1
 # 12 "./application.h"
+# 1 "./ECU_Layer/ecu_layer_init.h" 1
+# 11 "./ECU_Layer/ecu_layer_init.h"
 # 1 "./ECU_Layer/LED/ecu_led.h" 1
 # 12 "./ECU_Layer/LED/ecu_led.h"
 # 1 "./ECU_Layer/LED/../../MCAL_Layer/GPIO/hal_gpio.h" 1
@@ -4752,7 +4754,7 @@ Std_ReturnType led_initialize(const led_t *led);
 Std_ReturnType led_turn_on(const led_t *led);
 Std_ReturnType led_turn_off(const led_t *led);
 Std_ReturnType led_turn_toggle(const led_t *led);
-# 12 "./application.h" 2
+# 11 "./ECU_Layer/ecu_layer_init.h" 2
 
 # 1 "./ECU_Layer/Button/ecu_button.h" 1
 # 12 "./ECU_Layer/Button/ecu_button.h"
@@ -4785,7 +4787,7 @@ typedef struct {
 Std_ReturnType button_initialize(const button_t *btn);
 # 55 "./ECU_Layer/Button/ecu_button.h"
 Std_ReturnType button_read_state(const button_t *btn,button_state_t *btn_state);
-# 13 "./application.h" 2
+# 12 "./ECU_Layer/ecu_layer_init.h" 2
 
 # 1 "./ECU_Layer/Relay/ecu_relay.h" 1
 # 12 "./ECU_Layer/Relay/ecu_relay.h"
@@ -4802,7 +4804,7 @@ typedef struct {
 Std_ReturnType relay_initialize(const relay_t *_relay);
 Std_ReturnType relay_trun_on(const relay_t *_relay);
 Std_ReturnType relay_trun_off(const relay_t *_relay);
-# 14 "./application.h" 2
+# 13 "./ECU_Layer/ecu_layer_init.h" 2
 
 # 1 "./ECU_Layer/DC_Motor/ecu_dc_motor.h" 1
 # 13 "./ECU_Layer/DC_Motor/ecu_dc_motor.h"
@@ -4818,7 +4820,7 @@ Std_ReturnType dc_motor_initialize(const dc_motor_t* _dc_motor);
 Std_ReturnType dc_motor_move_right(const dc_motor_t* _dc_motor);
 Std_ReturnType dc_motor_move_left(const dc_motor_t* _dc_motor);
 Std_ReturnType dc_motor_move_stop(const dc_motor_t* _dc_motor);
-# 15 "./application.h" 2
+# 14 "./ECU_Layer/ecu_layer_init.h" 2
 
 # 1 "./ECU_Layer/7_Segment/ecu_seven_seg.h" 1
 # 11 "./ECU_Layer/7_Segment/ecu_seven_seg.h"
@@ -4838,7 +4840,7 @@ typedef struct {
 
 Std_ReturnType seven_segment_intialize (const segment_t *seg);
 Std_ReturnType seven_segment_write_number (const segment_t *seg, uint8 number);
-# 16 "./application.h" 2
+# 15 "./ECU_Layer/ecu_layer_init.h" 2
 
 # 1 "./ECU_Layer/KeyPad/ecu_keypad.h" 1
 # 12 "./ECU_Layer/KeyPad/ecu_keypad.h"
@@ -4853,88 +4855,38 @@ typedef struct {
 
 Std_ReturnType keypad_initialize(const keypad_t *_keypad_obj);
 Std_ReturnType keypad_get_value(const keypad_t *_keypad_obj, uint8 *value);
-# 17 "./application.h" 2
-# 26 "./application.h"
+# 16 "./ECU_Layer/ecu_layer_init.h" 2
+
+
+void ecu_layer_intialize(void);
+# 12 "./application.h" 2
+
+
+
+
+
+
+extern keypad_t keypad1;
+
 void application_intialize(void);
 # 8 "application.c" 2
 
 
 
 
-pin_config_t seg1_enable = {
-    .port = PORTD_INDEX,
-    .pin = GPIO_PIN0,
-    .logic = GPIO_LOW,
-    .direction = GPIO_DIRECTION_OUTPUT,
-};
-
-pin_config_t seg2_enable = {
-    .port = PORTD_INDEX,
-    .pin = GPIO_PIN1,
-    .logic = GPIO_LOW,
-    .direction = GPIO_DIRECTION_OUTPUT,
-};
-
-segment_t seg1 = {
-
-    .segment_pin[0].port = PORTC_INDEX,
-    .segment_pin[0].pin = GPIO_PIN0,
-    .segment_pin[0].logic = GPIO_LOW,
-    .segment_pin[0].direction = GPIO_DIRECTION_OUTPUT,
-
-
-    .segment_pin[1].port = PORTC_INDEX,
-    .segment_pin[1].pin = GPIO_PIN1,
-    .segment_pin[1].logic = GPIO_LOW,
-    .segment_pin[1].direction = GPIO_DIRECTION_OUTPUT,
-
-
-    .segment_pin[2].port = PORTC_INDEX,
-    .segment_pin[2].pin = GPIO_PIN2,
-    .segment_pin[2].logic = GPIO_LOW,
-    .segment_pin[2].direction = GPIO_DIRECTION_OUTPUT,
-
-
-    .segment_pin[3].port = PORTC_INDEX,
-    .segment_pin[3].pin = GPIO_PIN3,
-    .segment_pin[3].logic = GPIO_LOW,
-    .segment_pin[3].direction = GPIO_DIRECTION_OUTPUT,
-
-
-    .segment_type = SEGMENT_COMMON_ANODE
-
-};
-
-uint8 number = 48 , counter = 0;
+uint8 keypad_value = 0;
 
 int main() {
     Std_ReturnType ret = (Std_ReturnType)0x00;
     application_intialize();
 
     while (1) {
-
-
-        for (counter = 0; counter <= 50; counter++) {
-            ret = seven_segment_write_number(&seg1, (uint8) (number % 10));
-            ret = gpio_pin_write_logic(&seg1_enable, GPIO_HIGH);
-            _delay((unsigned long)((10)*(8000000UL/4000.0)));
-            ret = gpio_pin_write_logic(&seg1_enable, GPIO_LOW);
-
-            ret = seven_segment_write_number(&seg1, (uint8) (number / 10));
-            ret = gpio_pin_write_logic(&seg2_enable, GPIO_HIGH);
-            _delay((unsigned long)((10)*(8000000UL/4000.0)));
-            ret = gpio_pin_write_logic(&seg2_enable, GPIO_LOW);
-        }
-
-        number++;
+        ret = keypad_get_value(&keypad1,&keypad_value);
     }
     return (0);
 }
 
 void application_intialize(void) {
     Std_ReturnType ret = (Std_ReturnType)0x00;
-    ret = seven_segment_intialize(&seg1);
-    ret = gpio_pin_intialize(&seg1_enable);
-    ret = gpio_pin_intialize(&seg2_enable);
-
+    ecu_layer_intialize();
 }

@@ -1,7 +1,7 @@
 ### HEXMate logfile and output summary ###
 
 ### Command-line arguments ###
- C:\Users\MC\AppData\Local\Temp\xcAsaag.\driver_tmp_3.o
+ C:\Users\MC\AppData\Local\Temp\xcAscps.\driver_tmp_3.o
  -Odist/default/production\projects_2025.production.hex
  -logfile=dist/default/production\projects_2025.production.hxl
  -addressing=1
@@ -9,17 +9,17 @@
 
 ### Memory Usage ###
  Input file ranges:
-  0h - 3h		(C:\Users\MC\AppData\Local\Temp\xcAsaag.\driver_tmp_3.o)
-  1000h - 15F1h		(C:\Users\MC\AppData\Local\Temp\xcAsaag.\driver_tmp_3.o)
-  300000h - 30000Dh		(C:\Users\MC\AppData\Local\Temp\xcAsaag.\driver_tmp_3.o)
+  0h - 3h		(C:\Users\MC\AppData\Local\Temp\xcAscps.\driver_tmp_3.o)
+  1000h - 150Dh		(C:\Users\MC\AppData\Local\Temp\xcAscps.\driver_tmp_3.o)
+  300000h - 30000Dh		(C:\Users\MC\AppData\Local\Temp\xcAscps.\driver_tmp_3.o)
  Unused ranges:
   4h - FFFh
-  15F2h - 2FFFFFh
+  150Eh - 2FFFFFh
 
 ### Hex Memory Map ###
  Legend:
   -- = Unused memory
-  H1 = Input file             (C:\Users\MC\AppData\Local\Temp\xcAsaag.\driver_tmp_3.o)
+  H1 = Input file             (C:\Users\MC\AppData\Local\Temp\xcAscps.\driver_tmp_3.o)
 ----------------------------------------------------------
          | 00 01 02 03 04 05 06 07 08 09 0A 0B 0C 0D 0E 0F
 ----------------------------------------------------------
@@ -105,22 +105,7 @@
 000014D0 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 000014E0 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 000014F0 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
-00001500 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
-00001510 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
-00001520 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
-00001530 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
-00001540 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
-00001550 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
-00001560 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
-00001570 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
-00001580 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
-00001590 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
-000015A0 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
-000015B0 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
-000015C0 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
-000015D0 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
-000015E0 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
-000015F0 | H1 H1 -- -- -- -- -- -- -- -- -- -- -- -- -- --
+00001500 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 -- --
 ----------------------------------------------------------
 00300000 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 -- --
 00300010 | --
