@@ -17,6 +17,10 @@
           <itemPath>ECU_Layer/DC_Motor/ecu_dc_motor.h</itemPath>
           <itemPath>ECU_Layer/DC_Motor/ecu_dc_motor_cfg.h</itemPath>
         </logicalFolder>
+        <logicalFolder name="KeyPad" displayName="KeyPad" projectFiles="true">
+          <itemPath>ECU_Layer/KeyPad/ecu_keypad_cfg.h</itemPath>
+          <itemPath>ECU_Layer/KeyPad/ecu_keypad.h</itemPath>
+        </logicalFolder>
         <logicalFolder name="LED" displayName="LED" projectFiles="true">
           <itemPath>ECU_Layer/LED/ecu_led.h</itemPath>
           <itemPath>ECU_Layer/LED/ecu_led_cfg.h</itemPath>
@@ -58,6 +62,9 @@
         </logicalFolder>
         <logicalFolder name="DC_Motor" displayName="DC_Motor" projectFiles="true">
           <itemPath>ECU_Layer/DC_Motor/ecu_dc_motor.c</itemPath>
+        </logicalFolder>
+        <logicalFolder name="KeyPad" displayName="KeyPad" projectFiles="true">
+          <itemPath>ECU_Layer/KeyPad/ecu_keypad.c</itemPath>
         </logicalFolder>
         <logicalFolder name="LED" displayName="LED" projectFiles="true">
           <itemPath>ECU_Layer/LED/ecu_led.c</itemPath>

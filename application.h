@@ -14,6 +14,7 @@
 #include "ECU_Layer/Relay/ecu_relay.h"
 #include "ECU_Layer/DC_Motor/ecu_dc_motor.h"
 #include "ECU_Layer/7_Segment/ecu_seven_seg.h"
+#include "ECU_Layer/KeyPad/ecu_keypad.h"
 
 /* Section: Macro Declarations */
 
